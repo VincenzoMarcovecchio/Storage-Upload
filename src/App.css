@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(229, 57%, 11%);
+  background-image: url('./assets/images/bg-desktop.svg');
+  background-position: 100% 120%;
+  background-repeat: no-repeat;
+  background-size: auto;
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  letter-spacing: 0.6px;
+  font-size: 0.9rem;
+  color: hsl(231, 9%, 73%);
+  word-spacing: 0.4px;
+}
+strong {
+  color: hsl(240, 6%, 91%);
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 50%;
+  width: 100%;
+}
+input[type='file'] {
+  display: none;
+}
+label {
+  color: #fff;
+  position: absolute;
+  bottom: -34px;
+  font-size: 0.8rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+@media (max-width: 833px) {
+  .p {
+    width: 100%;
+    text-align: center;
+  }
+  .container {
+    height: 50%;
+  }
+
+  #root {
+    background-image: url('./assets/images/bg-mobile.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
